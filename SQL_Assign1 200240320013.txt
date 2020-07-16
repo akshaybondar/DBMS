@@ -1,0 +1,176 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+Center 		:	Kharghar
+Assignment	:	SQL_Assign1
+==========================================================
+Q1..
+
+create table SALESPEOPLE
+(
+Snum int(4),
+Sname varchar(10),
+City varchar(10),
+Comm float(3,2)
+);
+===========================================================
+Q2.
+
+create table CUSTOMERS
+(
+Cnum int(4),
+Cname varchar(10),
+City varchar(10),
+Rating int(4),
+Snum int(4)
+);
+============================================================
+Q3..
+
+create table ORDERS
+(
+Onum int(4),
+Amt float(7,2),
+Odate date,
+Cnum int(4),
+Snum int(4)
+);
+
+=============================================================
+
+Q4.
+
+insert into SALESPEOPLE
+(snum,sname,city,comm)
+values
+(1001,'Peel','London',0.12)
+;
+
+insert into SALESPEOPLE
+(snum,sname,city,comm)
+values
+(1002,'Serres','San Jose',0.13)
+;
+insert into SALESPEOPLE
+(snum,sname,city,comm)
+values
+(1004,'Motika','London',0.11)
+;
+insert into SALESPEOPLE
+(snum,sname,city,comm)
+values
+(1007,'Rifkin','Barcelona',0.15)
+;
+insert into SALESPEOPLE
+(snum,sname,city,comm)
+values
+(1003,'Axelrod','New York',0.10)
+;
+==================================================
+Q5.
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2001,'Hoffman','London',100,1001)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2002,'Giovanni','Rome',200,1003)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2003,'Liu','San Jose',200,1002)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2004,'Grass','Berlin',300,1002)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2006,'Clemens','London',100,1001)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2008,'Cisneros','San Jose',300,1007)
+;
+
+insert into CUSTOMERS
+(cnum,cname,city,rating,snum)
+values
+(2007,'Pereira','Rome',100,1004)
+;
+
+===========================================================
+Q6
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3001,18.69,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2008,1007
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3003,767.19,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2001,1001
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3002,1900.10,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2007,1004
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3005,5160.45,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2003,1002
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3006,1098.16,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2008,1007
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3009,1713.23,
+STR_TO_DATE('04-OCT-1990','%d-%b-%Y'),
+2002,1003
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3007,75.75,
+STR_TO_DATE('04-OCT-1990','%d-%b-%Y'),
+2004,1002
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3008,4723.00,
+STR_TO_DATE('05-OCT-1990','%d-%b-%Y'),
+2006,1001
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3010,1309.95,
+STR_TO_DATE('06-OCT-1990','%d-%b-%Y'),
+2004,1002
+);
+
+insert into ORDERS (onum,amt,odate,cnum,snum) values 
+(3011,9891.88,
+STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),
+2006,1001
+);
+
+===========================================================

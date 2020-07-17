@@ -1,0 +1,26 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+Center 		:	Kharghar
+Assignment	:	SQL_Assign2
+==========================================================
+
+1) Which field of the Customers table is the primary key?
+->CNUM 
+
+2) What is the 4 th column of the Customers table?
+->RATING
+
+
+3) What is another word for row? For column?
+->
+For Row		----	tuple,Entity,Opportunity
+For Column	----	Attribute, Method
+
+4) Why isn’t it possible to see the first five rows of a table?
+
+->	
+	Because in hard disks rows not stored in secquential manner 
+	Every Row is file and its having its own address
+	And because of the different different memory locations 
+	Every Row has different address secquences so we dont know
+	which row is first and which one is last..

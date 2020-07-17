@@ -32,7 +32,7 @@ select city,sname,snum,comm from SALESPEOPLE;
 customer in San Jose.
 ->
 
-select cname,rating from CUSTOMERS where city='San Jose';
+select rating,cname from CUSTOMERS where city='San Jose';
 
 ==================================================================
 
@@ -40,6 +40,6 @@ select cname,rating from CUSTOMERS where city='San Jose';
 duplicates) with orders in the Orders table.
 ->
 
-select distinct snum from ORDERS;
+select distinct snum,onum from ORDERS;
 
 ==================================================================

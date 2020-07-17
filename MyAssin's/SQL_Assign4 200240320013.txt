@@ -1,14 +1,14 @@
 Student ID 			:	200240320013
-Student Name 	:	Akshay Bondar
-Center 				:	Kharghar
-Assignment		:	SQL_Assign4
+Student Name 	  :	Akshay Bondar
+Center 				  :	Kharghar
+Assignment		  :	SQL_Assign4
 ==================================================================
 
 1) Write a select command that produces the order number, amount, and date for all
 rows in the Orders table.
 ->
 
-select onum,amt,date from ORDERS;
+select onum,amt,odate from ORDERS;
 
 ==================================================================
 
@@ -32,7 +32,7 @@ select city,sname,snum,comm from SALESPEOPLE;
 customer in San Jose.
 ->
 
-select rating from CUSTOMERS where city='San Jose';
+select cname,rating from CUSTOMERS where city='San Jose';
 
 ==================================================================
 

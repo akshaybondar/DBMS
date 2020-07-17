@@ -1,0 +1,40 @@
+Student ID 			:	200240320013
+Student Name 	:	Akshay Bondar
+Center 				:	Kharghar
+Assignment		:	SQL_Assign3
+==========================================================
+1) Does ANSI recognize the data type DATE?
+->
+Yes..data types will allow dates in the Gregorian format
+from renge 1st Jan 1000AD to 31st Dec 9999AD
+with default date format   "	YYYY-MM-DD	"
+
+==========================================================
+
+2) Which subdivision of SQL is used to insert values in tables?
+
+->
+	There is DML Command for insert values into tables
+	There are some subdivisions to insert values in tables like
+	
+	insert into table_name 
+	(col_name1,col_name2,col_name3,......)
+	values
+	(Data1,Data 2,data3,................................) ;
+	
+	OR
+	insert into table_name 
+	values
+	(Data1,Data 2,data3,............) ;
+	
+	FOR Multiple Rows
+	
+	insert into table_name 
+	values
+	(Data1,Data 2,data3,............) ,
+	(Data1,Data 2,data3,............) ,
+	(Data1,Data 2,data3,............) ,
+	(Data1,Data 2,data3,............) ;
+	
+
+==========================================================

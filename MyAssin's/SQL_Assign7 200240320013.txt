@@ -19,13 +19,14 @@ mysql> select count(onum) from ORDERS where odate='1990-10-03';
 2) Write a query that counts the number of different non-NULL city values in the
 Customers table.
 
-mysql> select count(isnull(city)) from CUSTOMERS;
-+---------------------+
-| count(isnull(city)) |
-+---------------------+
-|                   7 |
-+---------------------+
+mysql> select count(distinct ifnull(city,0)) from CUSTOMERS; 
++--------------------------------+
+| count(distinct ifnull(city,0)) |
++--------------------------------+
+|                              4 |
++--------------------------------+
 1 row in set (0.00 sec)
+
 
 =========================================================================================
 

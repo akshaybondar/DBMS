@@ -1,0 +1,85 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+CDAC Center 		:	Kharghar
+Assignment	:	Assignment7
+
+=========================================================================================
+
+1) Write a query that counts all orders for October 3.																			
+
+mysql> select count(onum) from ORDERS where odate='1990-10-03';
++-------------+
+| count(onum) |
++-------------+
+|           5 |
++-------------+
+
+=========================================================================================
+
+2) Write a query that counts the number of different non-NULL city values in the
+Customers table.
+
+mysql> select count(isnull(city)) from CUSTOMERS;
++---------------------+
+| count(isnull(city)) |
++---------------------+
+|                   7 |
++---------------------+
+1 row in set (0.00 sec)
+
+=========================================================================================
+
+3) Write a query that selects each customer’s smallest order.
+
+mysql> Select cnum, min(amt) from ORDERS group by cnum;
++------+----------+
+| cnum | min(amt) |
++------+----------+
+| 2001 |   767.19 |
+| 2002 |  1713.23 |
+| 2003 |  5160.45 |
+| 2004 |    75.75 |
+| 2006 |  4723.00 |
+| 2007 |  1900.10 |
+| 2008 |    18.69 |
++------+----------+
+7 rows in set (0.00 sec)
+
+
+=========================================================================================
+
+4) Write a query that selects the first customer, in alphabetical order, whose name begins with G.
+
+mysql> select min(cname) from CUSTOMERS where cname like 'G%';
++------------+
+| min(cname) |
++------------+
+| Giovanni   |
++------------+
+1 row in set (0.00 sec)
+
+=========================================================================================
+
+5) Write a query that selects the highest rating in each city.
+
+mysql> Select max(rating) from CUSTOMERS group by city; 
++-------------+
+| max(rating) |
++-------------+
+|         300 |
+|         100 |
+|         200 |
+|         300 |
++-------------+
+4 rows in set (0.00 sec)
+
+
+=========================================================================================
+
+6) Write a query that counts the number of salespeople registering orders for each
+day. (If a salesperson has more than one order on a given day, he or she should be
+counted only once.).
+
+
+=========================================================================================
+

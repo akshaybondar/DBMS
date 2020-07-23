@@ -82,5 +82,9 @@ day. (If a salesperson has more than one order on a given day, he or she should 
 counted only once.).
 
 
+select count(odate) from ORDERS
+group by odate;
+
+
 =========================================================================================
 

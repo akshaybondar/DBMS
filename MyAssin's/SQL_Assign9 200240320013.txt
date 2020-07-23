@@ -1,0 +1,58 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+CDAC Center 		:	Kharghar
+Assignment	:	Assignment9
+
+=========================================================================================
+
+1) Write a query that lists each order number followed by the name of the customer
+who made the order.
+
+mysql> select Onum ,cname from CUSTOMERS,ORDERS where ORDERS.cnum=CUSTOMERS.cnum;
++------+----------+
+| Onum | cname    |
++------+----------+
+| 3001 | Cisneros |
+| 3003 | Hoffman  |
+| 3002 | Pereira  |
+| 3005 | Liu      |
+| 3006 | Cisneros |
+| 3009 | Giovanni |
+| 3007 | Grass    |
+| 3008 | Clemens  |
+| 3010 | Grass    |
+| 3011 | Clemens  |
++------+----------+
+10 rows in set (0.00 sec)
+
+
+=========================================================================================
+
+
+2) Write a query that gives the names of both the salesperson and the customer for
+each order along with the order number.
+
+select Onum ,cname,sname from ORDERS,CUSTOMERS,SALESPEOPLE 
+where ORDERS.snum=CUSTOMERS.snum and ORDERS.snum=SALESPEOPLE.snum;
+
+=========================================================================================
+
+3) Write a query that produces all customers serviced by salespeople with a
+commission above 12%. Output the customer’s name, the salesperson’s name,
+and the salesperson’s rate of commission.
+
+select cname,SALESPEOPLE.snum,comm*100 as 'Rate' 
+from CUSTOMERS,SALESPEOPLE 
+where comm>.12 and CUSTOMERS.snum=SALESPEOPLE.snum;
+
+=========================================================================================
+
+4) Write a query that calculates the amount of the salesperson’s commission on each
+order by a customer with a rating above 100.
+
+select comm,amt from ORDERS,CUSTOMERS,SALESPEOPLE 
+where SALESPEOPLE.snum=CUSTOMERS.snum
+and ORDERS.snum=SALESPEOPLE.snum
+and rating>100;
+=========================================================================================
+

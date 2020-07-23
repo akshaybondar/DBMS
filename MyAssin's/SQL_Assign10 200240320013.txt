@@ -1,0 +1,25 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+CDAC Center 		:	Kharghar
+Assignment	:	Assignment10
+
+=========================================================================================
+
+1) Write a query that produces all pairs of salespeople who are living in the same
+city. Exclude combinations of salespeople with themselves as well as duplicate
+rows with the order reversed.
+
+select x.sname,y.sname,x.city from SALESPEOPLE x,SALESPEOPLE y
+where x.city=y.city and x.sname<y.sname;
+
+=========================================================================================
+
+2) Write a query that produces the names and cities of all customers with the same
+rating as Hoffman.
+
+select cname,city from CUSTOMERS
+where rating =
+(select rating from CUSTOMERS where cname='Hoffman');
+
+=========================================================================================
+

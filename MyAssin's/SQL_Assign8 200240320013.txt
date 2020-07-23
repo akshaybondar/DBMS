@@ -1,7 +1,7 @@
 Student ID 	:	200240320013
 Student Name 	:	Akshay Bondar
 CDAC Center 		:	Kharghar
-Assignment	:	Assignment7
+Assignment	:	Assignment8
 
 =========================================================================================
 
@@ -53,6 +53,9 @@ mysql> Select city,max(rating)from CUSTOMERS group by city;
 field first, followed by the customer’s name and number.
 
 
+select rating,cname,snum
+from CUSTOMERS
+order by rating desc;
 
 =========================================================================================
 

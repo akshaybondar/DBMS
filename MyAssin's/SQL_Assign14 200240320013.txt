@@ -1,0 +1,39 @@
+Student ID 	:	200240320013
+Student Name 	:	Akshay Bondar
+CDAC Center 		:	Kharghar
+Assignment	:	Assignment14(Entering, Deleting, and Changing Field Values.)
+
+=========================================================================================
+
+
+1) Write a command that puts the following values, 
+	in their given order, into the salespeople table: 
+	city – San Jose, name – Blanco, comm – NULL, snum – 1100.
+	
+	insert into SALESPEOPLE (city,sname,comm,snum)
+	values('San Jose','Blanco',NULL,1100);
+	
+	
+=========================================================================================
+
+2) 	Write a command that removes all orders from customer Clemens from the
+		Orders table.
+		
+		delete from ORDERS where cnum=(select cname from CUSTOMERS where cname='Clemens');
+
+=========================================================================================
+
+3) Write a command that increases the rating of all customers in Rome by 100.
+
+	update CUSTOMERS set rating=rating+100 where city ='Rome';
+
+=========================================================================================
+
+4) Salesperson Serres has left the company. Assign her customers to Motika.
+
+	update CUSTOMERS 
+	set snum=(select snum from SALESPEOPLE where sname='Motika') 
+	where snum=(select snum from SALESPEOPLE where sname='Serres');
+
+=========================================================================================
+

@@ -20,9 +20,10 @@ where snum=(select snum from SALESPEOPLE where sname='Serres'));
 2) Write a query using ANY or ALL that will find all salespeople who have no
 customers located in their city.
 
-select * from SALESPEOPLE 
-where (snum,city) not in 
-(select snum,city from CUSTOMERS);
+
+select sname,CITY from SALESPEOPLE 
+where city <>ALL (select city from CUSTOMER);
+
 
 =========================================================================================
 
@@ -40,9 +41,10 @@ where city ='London'));
 
 4) Write the above query using MIN or MAX.
 
-select * from ORDERS 
-where amt>(select min(amt) from CUSTOMERS,ORDERS 
-where ORDERS.cnum = CUSTOMERS.cnum 
-group by city having city='London');
+
+select *from ORDERS 
+where amt >any(select min(amt) from ORDERS 
+where cnum in
+(select cnum from CUSTOMER where city='London'));
 
 =========================================================================================
